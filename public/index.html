@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B&B AUTOMOTIVE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white scroll-smooth">
+
+  <nav class="bg-gray-900 px-6 py-4 fixed w-full z-50">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div class="text-xl font-bold">B&B AUTOMOTIVE</div>
+
+      <!-- Hamburger -->
+      <button id="nav-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Links -->
+      <ul id="nav-links" class="hidden md:flex space-x-6">
+        <li class="relative group">
+          <a href="#" class="hover:text-teal-400">Home</a>
+        </li>
+        <li class="relative group">
+          <button class="hover:text-teal-400">Services ▾</button>
+          <!-- Dropdown -->
+          <ul class="absolute left-0 mt-0 hidden group-hover:block bg-gray-800 rounded-lg shadow-lg">
+            <li><a href="/web" class="block px-4 py-2 hover:bg-gray-700">Web Design</a></li>
+            <li><a href="/repair" class="block px-4 py-2 hover:bg-gray-700">Repair</a></li>
+          </ul>
+        </li>
+        <li><a href="/about" class="hover:text-teal-400">About</a></li>
+        <li><a href="/contact" class="hover:text-teal-400">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul id="mobile-links" class="hidden flex-col mt-4 space-y-2 md:hidden">
+      <li><a href="#" class="block hover:text-teal-400">Home</a></li>
+      <li>
+        <details class="bg-gray-800 rounded-lg">
+          <summary class="px-4 py-2 cursor-pointer hover:text-teal-400">Services</summary>
+          <ul class="px-4 pb-2">
+            <li><a href="/web" class="block py-1 hover:text-teal-400">Web Design</a></li>
+            <li><a href="/repair" class="block py-1 hover:text-teal-400">Repair</a></li>
+          </ul>
+        </details>
+      </li>
+      <li><a href="/about" class="block hover:text-teal-400">About</a></li>
+      <li><a href="/contact" class="block hover:text-teal-400">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Hero -->
+  <section class="relative w-full h-screen">
+    <!-- Background Image -->
+    <img 
+      src="https://cdn.repairshopwebsites.com/templates/69/images/Banner1_suv-small.jpg" 
+      srcset="
+        https://cdn.repairshopwebsites.com/templates/69/images/Banner1_suv-small.jpg 450w,
+        https://cdn.repairshopwebsites.com/templates/69/images/Banner1_suv-medium.jpg 1400w,
+        https://cdn.repairshopwebsites.com/templates/69/images/Banner1_suv-large.jpg 2000w
+      "
+      sizes="(max-width: 450px) 450px, (max-width: 1400px) 1400px, 2000px"
+      alt="Car image"
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">WELCOME TO B&B AUTOMOTIVE!</h2>
+      <p class="text-lg md:text-2xl mb-6">AUTOMOTIVE REPAIR | MILE HIGH PROMISE</p>
+      <a href="Aurora-auto-repair-shop.php" class="bg-teal-600 hover:bg-teal-700 px-6 py-3 rounded-full text-white font-semibold transition">
+        CONTACT US
+      </a>
+    </div>
+  </section>
+  <section class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+        Why Choose Us?
+      </h2>
+  
+      <!-- Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- Box 1 -->
+        <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-2xl shadow-lg text-center flex flex-col transition transform hover:-translate-y-2 hover:shadow-2xl">
+          <div class="flex items-center justify-center mb-4 space-x-2">
+            <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <h3 class="text-lg font-bold text-gray-900">Automotive Experience</h3>
+          </div>
+          <p class="text-gray-700 flex-grow">
+            30+ years of repair expertise with ASE-Certified technicians.
+          </p>
+        </div>
+      
+        <!-- Box 2 -->
+        <div class="bg-gradient-to-br from-blue-50 to-white p-6 rounded-2xl shadow-lg text-center flex flex-col transition transform hover:-translate-y-2 hover:shadow-2xl">
+          <!-- Icon + Title -->
+          <div class="flex items-center justify-center mb-4 space-x-2">
+            <!-- Shopping Cart Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 fill="none" viewBox="0 0 24 24" 
+                 stroke-width="2" stroke="currentColor" 
+                 class="w-8 h-8 text-blue-600">
+              <path stroke-linecap="round" stroke-linejoin="round" 
+                    d="M2.25 2.25h1.386c.51 0 .955.343 
+                    1.087.835l.383 1.437M7.5 13.5h11.379c.621 
+                    0 1.17-.379 1.385-.947l2.347-6.318a.75.75 
+                    0 0 0-.7-1.035H6.261m1.239 8.3L5.25 
+                    4.5m2.25 9a2.25 2.25 0 1 0 0 4.5 2.25 
+                    2.25 0 0 0 0-4.5zm9 0a2.25 2.25 0 1 
+                    0 0 4.5 2.25 2.25 0 0 0 0-4.5z" />
+            </svg>
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-gray-900">All Vehicles</h3>
+          </div>
+          <!-- Description -->
+          <p class="text-gray-700">
+            Domestic, Asian, gas, or diesel — we service them all.
+          </p>
+        </div>
+      
+        <!-- Box 3 -->
+        <div class="bg-gradient-to-br from-yellow-50 to-white p-6 rounded-2xl shadow-lg text-center flex flex-col transition transform hover:-translate-y-2 hover:shadow-2xl">
+          <div class="flex items-center justify-center mb-4 space-x-2">
+            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3-3-1.343-3-3z" />
+            </svg>
+            <h3 class="text-lg font-bold text-gray-900">Warranty</h3>
+          </div>
+          <p class="text-gray-700">
+            Nationwide OEM & Factory Motor Parts Warranty.
+          </p>
+        </div>
+      
+        <!-- Box 4 -->
+        <div class="bg-gradient-to-br from-pink-50 to-white p-6 rounded-2xl shadow-lg text-center flex flex-col transition transform hover:-translate-y-2 hover:shadow-2xl">
+          <div class="flex items-center justify-center mb-4 space-x-2">
+            <!-- Heart Icon -->
+            <svg class="w-8 h-8 text-pink-600" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+            <!-- Title -->
+            <h3 class="text-lg font-bold text-gray-900">Customer First</h3>
+          </div>
+          <p class="text-gray-700">
+            Your comfort, safety, and happiness are our priority.
+          </p>
+        </div>
+      
+      </div>
+  
+      </div>
+    </div>
+  </section>
+
+
+  <section  id="services-jump" class="grid grid-cols-1 md:grid-cols-2 gap-4 h-screen">
+    <!-- Box 1 -->
+    <div class="relative bg-cover bg-center" style="background-image: url('https://media.istockphoto.com/id/1052540114/photo/work-tools.jpg?s=612x612&w=0&k=20&c=oOd2A1D9etiZU84BJUStFJtWjT0pjuxv5dOgG02a7AE=');">
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-between p-6">
+        <div class="text-center text-white">
+          <h2 class="text-2xl font-bold mb-2">AUTOMOTIVE REPAIR</h2>
+          <p class="text-lg">We offer all major and minor repairs including brakes and rotors, A/C and heater repair, timing belts, engine repair, batteries, and much more</p>
+        </div>
+        <div class="flex flex-col space-y-2 w-full max-w-xs mx-auto">
+          <button class="bg-transparent border-2 border-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition w-full">Scedule an Apointment</button>
+          <button class="bg-white text-gray-800 px-4 py-2 rounded hover:bg-gray-400 transition w-full">Read more -></button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Box 2 -->
+    <div class="relative bg-cover bg-center" style="background-image: url('https://www.bellperformance.com/hs-fs/file-15251830-jpg/images/oil_change_2.jpg');">
+      <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-between p-6">
+        <div class="text-center text-white">
+          <h2 class="text-2xl font-bold mb-2">PREVENTATIVE MAINTENANCE</h2>
+          <p class="text-sm">Keep your car on the road with regular oil changes tire rotations, and tune-ups.</p>
+        </div>
+        <div class="flex flex-col space-y-2 w-full max-w-xs mx-auto">
+          <button class="bg-transparent border-2 border-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition w-full">Scedule an Apointment</button>
+          <button class="bg-white text-gray-800 px-4 py-2 rounded hover:bg-gray-400 transition w-full">Read more -></button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Box 3 -->
+    <div class="relative bg-cover bg-center" style="background-image: url('https://irp.cdn-website.com/0fa50680/dms3rep/multi/picture-of-a-car-alternator-1-1-1.png');">
+      <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-between p-6">
+        <div class="text-center text-white">
+          <h2 class="text-2xl font-bold mb-2">WE DO ELECTRIC TOO</h2>
+          <p class="text-sm">batteries, harness, wireing, radios, any and all problems stop here</p>
+        </div>
+        <div class="flex flex-col space-y-2 w-full max-w-xs mx-auto">
+          <button class="bg-transparent border-2 border-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition w-full">Scedule an Apointment</button>
+          <button class="bg-white text-gray-800 px-4 py-2 rounded hover:bg-gray-400 transition w-full">Read more -></button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Box 4 -->
+    <div class="relative bg-cover bg-center" style="background-image: url('https://media.istockphoto.com/id/1827041613/photo/car-tires-on-the-shelves-in-a-car-shop-car-shop.jpg?s=612x612&w=0&k=20&c=mka1zukylisuKl-ehPHhy7DB2LG8lQXx8kJ6OUpBQPU=');">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-between p-6">
+        <div class="text-center text-white">
+          <h2 class="text-2xl font-bold mb-2">ALIGNMENTS</h2>
+          <p class="text-sm">Let B&B Brothers Repair inspect your car to determine if you need an alignment.</p>
+        </div>
+        <div class="flex flex-col space-y-2 w-full max-w-xs mx-auto">
+          <button class="bg-transparent border-2 border-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition w-full">Scedule an Apointment</button>
+          <button class="bg-white text-gray-800 px-4 py-2 rounded hover:bg-gray-400 transition w-full">Read more -></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Separator bar -->
+<div class="w-full h-2 bg-gray-200 my-12 rounded-full"></div>
+
+  <!-- About Us Section -->
+<section class="relative bg-cover bg-center h-screen" style="background-image: url('https://w0.peakpx.com/wallpaper/842/333/HD-wallpaper-black-pattern-art-background-calm-cool-nice.jpg');">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-90 flex flex-col justify-center items-center text-center px-6 md:px-20">
+    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">About B&B Brothers Repair</h2>
+    <p class="text-lg md:text-xl text-gray-200 max-w-3xl mb-6">
+      With decades of experience, we specialize in automotive repair, diagnostics, and preventative maintenance. 
+      Our goal is simple: keep you safe, comfortable, and confident on the road.
+    </p>
+    <div class="flex space-x-4 flex-wrap justify-center">
+      <a href="/contact" class="bg-teal-600 text-white px-6 py-3 rounded hover:bg-teal-700 transition">Contact Us</a>
+      <a href="#services-jump" class="scroll-smooth bg-transparent border-2 border-white text-white px-6 py-3 rounded hover:bg-white hover:text-gray-800 transition">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="text-center bg-gray-300 py-16">
+  <h1 class="text-4xl font-bold mb-6 text-gray-900">
+    Check out what others say about our work
+  </h1>
+  <a href="https://www.google.com/maps/place/YOUR_BUSINESS_NAME/reviews"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="bg-yellow-700 text-white text-lg px-8 py-4 rounded-lg hover:bg-yellow-800 transition inline-block">
+    See Our Google Reviews
+  </a>
+</section>
+
+<section class="relative w-full bg-cover bg-center">
+  <!-- Background image -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?cs=srgb&dl=pexels-pixabay-159298.jpg&fm=jpg" class="w-full h-full object-cover" alt="Background">
+  </div>
+  
+
+  <!-- Overlay for darkening -->
+  <div class="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+
+  <!-- Content -->
+  <div class="relative z-20 flex flex-col items-center text-center p-8 md:p-20 space-y-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-white">Visit Us Today</h2>
+    <p class="text-base md:text-lg text-white max-w-xl">
+      Come see us at our location for top-notch service. We’re here to help with all your automotive needs.
+    </p>
+    <a href="#map" class="bg-yellow-700 text-white px-6 py-3 rounded-lg hover:bg-yellow-800 transition">
+      View on Map
+    </a>
+
+    <!-- Map -->
+    <div id="map" class="w-full max-w-3xl h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden shadow-2xl mt-6">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d438.6361087895416!2d-104.82978608787867!3d39.63765452129865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c88627804a31d%3A0xf862da38f01b3936!2s4345%20S%20Parker%20Rd%2C%20Aurora%2C%20CO%2080015!5e0!3m2!1sen!2sus!4v1758917772739!5m2!1sen!2sus" 
+        class="w-full h-full border-0 rounded-lg"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="overflow-hidden py-6 bg-gray-50">
+  <div class="relative w-full">
+    <div class="flex animate-scroll whitespace-nowrap space-x-8">
+      <!-- Example images -->
+      <img src="https://via.placeholder.com/150x80?text=Brand+1" alt="Brand 1" class="h-20">
+      <img src="https://via.placeholder.com/150x80?text=Brand+2" alt="Brand 2" class="h-20">
+      <img src="https://via.placeholder.com/150x80?text=Brand+3" alt="Brand 3" class="h-20">
+      <img src="https://via.placeholder.com/150x80?text=Brand+4" alt="Brand 4" class="h-20">
+      <img src="https://via.placeholder.com/150x80?text=Brand+5" alt="Brand 5" class="h-20">
+
+      <!-- Repeat the images for seamless scroll -->
+      <img src="https://via.placeholder.com/150x80?text=Brand+1" alt="Brand 1" class="h-20">
+      <img src="https://via.placeholder.com/150x80?text=Brand+2" alt="Brand 2" class="h-20">
+      <img src="https://via.placeholder.com/150x80?text=Brand+3" alt="Brand 3" class="h-20">
+      <img src="https://via.placeholder.com/150x80?text=Brand+4" alt="Brand 4" class="h-20">
+      <img src="https://via.placeholder.com/150x80?text=Brand+5" alt="Brand 5" class="h-20">
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-12"></footer>
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+    
+    <!-- Column 1: Logo + Social -->
+    <div class="flex flex-col items-start space-y-4">
+      <img src="https://via.placeholder.com/150x50?text=Logo" alt="Logo" class="mb-2">
+      <p class="text-gray-400">Follow us on social media:</p>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-yellow-500">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 4.5a9.93 9.93 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337 3a9.86 9.86 0 0 1-3.127 1.196A4.916 4.916 0 0 0 16.616 2c-2.717 0-4.92 2.203-4.92 4.917 0 .386.043.762.127 1.124A13.963 13.963 0 0 1 1.671 3.149a4.904 4.904 0 0 0-.665 2.475c0 1.708.87 3.216 2.188 4.099a4.904 4.904 0 0 1-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827a4.935 4.935 0 0 1-2.224.085c.626 1.956 2.444 3.376 4.6 3.416a9.868 9.868 0 0 1-6.102 2.104c-.396 0-.787-.023-1.175-.068A13.945 13.945 0 0 0 7.548 21c9.057 0 14.01-7.514 14.01-14.01 0-.213-.005-.426-.014-.637A10.012 10.012 0 0 0 24 4.5z"/>
+          </svg>
+        </a>
+        <a href="#" class="hover:text-yellow-500">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c-5.5 0-9.987 4.488-9.987 10.028 0 4.42 3.567 8.1 8.18 8.798v-6.226h-2.45v-2.572h2.45v-1.957c0-2.428 1.438-3.762 3.638-3.762 1.056 0 2.162.187 2.162.187v2.384h-1.22c-1.201 0-1.574.744-1.574 1.505v1.643h2.683l-.429 2.572h-2.254v6.226c4.613-.698 8.18-4.378 8.18-8.798 0-5.54-4.488-10.028-9.987-10.028z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Column 2: Address & Hours -->
+    <div class="flex flex-col space-y-4">
+      <h3 class="text-xl font-semibold mb-2">Our Location</h3>
+      <p>4345 S Parker Rd<br>Aurora, CO 80015</p>
+      <p class="mt-2 font-semibold">Hours</p>
+      <p>Mon-Fri: 8am - 6pm<br>Sat: 9am - 3pm<br>Sun: Closed</p>
+    </div>
+
+    <!-- Column 3: Contact Form -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+      <form class="flex flex-col space-y-4">
+        <input type="text" placeholder="Your Name" class="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-500">
+        <input type="email" placeholder="Your Email" class="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-500">
+        <textarea placeholder="Your Message" class="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-yellow-500"></textarea>
+        <button type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold px-4 py-2 rounded transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="mt-12 text-center text-gray-500 text-sm">
+    &copy; 2025 Your Business Name. All rights reserved.
+  </div>
+</footer>
+
+
+
+
+
+
+</body>
+
+<style> 
+ @keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+</style>
+
+
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const mobileLinks = document.getElementById('mobile-links');
+  toggle.addEventListener('click', () => {
+    mobileLinks.classList.toggle('hidden');
+  });
+
+
+</script>
+
+</html>
